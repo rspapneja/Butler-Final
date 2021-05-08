@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android.datatransport:transport-backend-cct:2.3.1@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/477d15c76ebe8058092df60658da41c4/jetified-transport-backend-cct-2.3.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9ffc222a75b7eefa2ece162be35a6866/transformed/jetified-transport-backend-cct-2.3.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9ffc222a75b7eefa2ece162be35a6866/transformed/jetified-transport-backend-cct-2.3.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/9ffc222a75b7eefa2ece162be35a6866/transformed/jetified-transport-backend-cct-2.3.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.datatransport/transport-backend-cct/2.3.1/44ab63fd6744b961c97d388fef15c888f99b561a/transport-backend-cct-2.3.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

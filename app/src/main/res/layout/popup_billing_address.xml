@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:gravity="center|top"
+    android:layout_height="match_parent"
+    android:background="@drawable/round_rectangular_whiteshape"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_rectangular_grey"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/latinotypebold"
+            android:padding="@dimen/_10sdp"
+            android:text="Billing Address"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPantoneBlack"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/closedialog"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_cross"
+            android:tint="@color/colorPantoneBlack" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_10sdp">
+
+        <EditText
+            android:id="@+id/ed_billing_address"
+            android:layout_width="match_parent"
+            android:minHeight="@dimen/_70sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_rectangular_yellow_light"
+            android:hint="Enter billing Address"
+            android:inputType="text|textMultiLine"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:gravity="left|top"
+            android:maxLines="5"
+            android:paddingLeft="@dimen/_5sdp"
+            android:textColor="@color/txtPantoneBlack" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
+
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/margin_difference_between_view"
+            android:background="@drawable/round_rectangular_yellow_light">
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/country_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:ccpDialog_keyboardAutoPopup="false"
+                app:ccp_contentColor="@color/colorPantoneBlack"
+                app:ccp_countryPreference="IE,GB,AL,AD,AT,BY,BE,BA,BG,HR,CY,CZ,DK,EE,FO,FI,FR,DE,GI,GR,HU,IS,IM,IT,RS,LV,LI,LT,LU,MK,MT,MD,MC,ME,NL,NO,PL,PT,RO,RU,SM,RS,SK,SI,ES,SE,CH,UA,VA,RS"
+                android:gravity="center|left"
+                app:ccp_defaultNameCode="IE"
+                app:ccp_showFlag="false"
+                app:ccp_showFullName="true"
+                app:ccp_showNameCode="true"
+                app:ccp_showPhoneCode="false"
+                app:ccp_textSize="@dimen/txtSizeSmall" />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_weight="0.4">
+
+            <EditText
+                android:id="@+id/city"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/round_rectangular_yellow_light"
+                android:hint="City"
+                android:inputType="text"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:textColor="@color/txtPantoneBlack" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_10sdp">
+
+        <EditText
+            android:id="@+id/postal_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/round_rectangular_yellow_light"
+            android:hint="Postal Code"
+            android:textAllCaps="true"
+            android:inputType="textPersonName"
+            android:paddingLeft="@dimen/_5sdp"
+            android:textColor="@color/txtPantoneBlack" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:textAllCaps="true"
+        android:id="@+id/bt_confirmaPay"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:background="@drawable/round_rectangular_pantone_light"
+        android:text="Confirm And Pay" />
+</LinearLayout>

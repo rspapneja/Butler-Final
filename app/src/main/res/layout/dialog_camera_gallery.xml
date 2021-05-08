@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_145sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/ColorPantoneLight"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/txtWhite"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:text="Choose option"/>
+        <ImageView
+            android:id="@+id/iv_message_cross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="@dimen/_7sdp"
+            android:tint="@color/ColorWhite"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_dialog_cross"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_take_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableTop="@drawable/ic_photo_camera"
+            android:gravity="center"
+            android:text="Take Photo"
+            android:padding="@dimen/_12sdp"
+
+            android:layout_marginRight="@dimen/_40sdp"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/tv_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tv_take_photo"
+            android:gravity="center"
+            android:padding="@dimen/_12sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableTop="@drawable/ic_photo_gallery"
+            android:text="Gallery"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_12sdp" />
+    </RelativeLayout>
+</LinearLayout>

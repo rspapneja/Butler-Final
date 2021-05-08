@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+   <data>
+        <import type="android.view.View" />
+        <variable
+            name="itemList"
+            type="com.butlerschocolates.app.model.common.Item" />
+        <variable
+            name="position"
+            type="Integer" />
+        <variable
+            name="currencyType"
+            type="String" />
+    </data>
+     <RelativeLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="@{itemList.value}"
+                android:textAllCaps="true"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/txtSizeLarge"
+                android:fontFamily="@font/latinotype_arquitecta_book"
+                android:textColor="@color/colorPantoneBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="@{currencyType + String.valueOf(itemList.price)}"
+                android:textAllCaps="true"
+                android:layout_alignParentRight="true"
+                android:textSize="@dimen/txtSizeLarge"
+                android:fontFamily="@font/latinotype_arquitecta_book"
+                android:textColor="@color/colorPantoneBlack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</layout>

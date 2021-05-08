@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+  <data>
+
+    <import type="android.view.View" />
+
+    <variable
+        name="list"
+        type="com.butlerschocolates.app.model.storetiming.SavedCards" />
+
+    <variable
+        name="position"
+        type="Integer" />
+
+    <variable
+        name="savedCardClickedListener"
+        type="com.butlerschocolates.app.adapter.savedCard.SavedCardAdapter.SavedCardClickedListener"/>
+  </data>
+
+  <LinearLayout
+      android:layout_marginHorizontal="@dimen/_15sdp"
+      android:layout_margin="@dimen/_5sdp"
+      android:gravity="center|left"
+
+      android:background="@drawable/round_rectangular_yellow_light"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_40sdp">
+
+    <ImageView
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:id="@+id/checkbox"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        />
+
+    <TextView
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_gravity="center|left"
+        android:gravity="center|left"
+        android:layout_width="match_parent"
+        android:text="@{list.card_mask}"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:drawableRight="@drawable/ic_card"
+        android:layout_height="wrap_content" />
+  </LinearLayout>
+</layout>

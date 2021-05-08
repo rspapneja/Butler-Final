@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    app:startDestination="@id/storeListFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/storeListFragment"
+        android:name="com.butlerschocolates.app.fragment.store.StoreListFragment"
+        android:label="fragment_store_list"
+        tools:layout="@layout/fragment_store_list" >
+        <action
+            android:id="@+id/action_storeListFragment_to_storeDetailFragment"
+            app:destination="@id/storeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customiseYourProductFragment"
+        android:name="com.butlerschocolates.app.fragment.customiseyourproduct.CustomiseYourProductFragment"
+        android:label="fragment_customise_your_coffe"
+        tools:layout="@layout/fragment_customise_your_product" />
+
+    <fragment
+        android:id="@+id/storeDetailFragment"
+        android:name="com.butlerschocolates.app.fragment.store.StoreDetailFragment"
+        android:label="store_detail_fragment"
+        tools:layout="@layout/fragment_store_detail" >
+        <action
+            android:id="@+id/action_storeDetailFragment_to_customiseYourProductFragment"
+            app:destination="@id/customiseYourProductFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderPaymentFragment"
+        android:name="com.butlerschocolates.app.fragment.order.OrderPaymentFragment"
+        android:label="order_payment_fragment"
+        tools:layout="@layout/fragment_order_payment" >
+
+        <action
+            android:id="@+id/action_orderPaymentFragment_to_orderStatusFragment"
+            app:destination="@id/orderStatusFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderStatusFragment"
+        android:name="com.butlerschocolates.app.fragment.order.OrderStatusFragment"
+        android:label="fragment_order_status"
+        tools:layout="@layout/fragment_order_status" >
+        <action
+            android:id="@+id/action_orderStatusFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.butlerschocolates.app.fragment.order.OrderDetailFragment"
+        android:label="fragment_order_detail2"
+        tools:layout="@layout/fragment_order_detail" >
+        <action
+            android:id="@+id/action_orderDetailFragment_to_orderPaymentFragment"
+            app:destination="@id/orderPaymentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/supportChatFragment"
+        android:name="com.butlerschocolates.app.fragment.support.SupportChatFragment"
+        android:label="fragment_support_chat"
+        tools:layout="@layout/fragment_support_chat"/>
+    <fragment
+        android:id="@+id/chooseComplimentaryProductFragment"
+        android:name="com.butlerschocolates.app.fragment.choosecomplimentaryproduct.ComplimentaryProductFragment"
+        android:label="fragment_choose_complimentary_product"
+        tools:layout="@layout/fragment_choose_complimentary_product" />
+    <fragment
+        android:id="@+id/generalNotificationFrragment"
+        android:name="com.butlerschocolates.app.fragment.notification.NotificationFrragment"
+        android:label="fragment_general_notification_frragment"
+        tools:layout="@layout/fragment_general_notification_frragment" />
+</navigation>

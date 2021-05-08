@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:weightSum="1"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/attributeName"
+        android:layout_width="0dp"
+        android:layout_weight=".75"
+        android:layout_height="wrap_content"
+        android:text="+SOYA MILK"
+        android:paddingLeft="@dimen/_10sdp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/latinotype_arquitecta_regular"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/txtSizeSmall" />
+
+
+    <TextView
+        android:id="@+id/attributePrice"
+        android:layout_width="0dp"
+        android:layout_weight=".25"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/latinotype_arquitecta_regular"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/txtSizeSmall" />
+</LinearLayout>
+</layout>

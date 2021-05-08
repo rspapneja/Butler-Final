@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home_selector"
+        android:title="HOME" />
+    <item
+        android:id="@+id/my_buttler_card"
+        android:icon="@drawable/ic_star"
+        android:title="PLATINUM LOYALTY CARD" />
+    <item
+        android:id="@+id/account"
+        android:icon="@drawable/ic_account"
+        android:title="MY ACCOUNT" />
+</menu>

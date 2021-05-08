@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/round_rectangular_whiteshape"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/round_rectangular_grey"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_alertTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/latinotypebold"
+            android:gravity="center"
+            android:text="Alert"
+            android:textAllCaps="true"
+            android:textColor="@color/txtPantoneBlack"
+            android:textSize="@dimen/txtSizeLarge" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_messageText"
+        android:minHeight="@dimen/_30sdp"
+        android:gravity="center|left"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/latinotype_arquitecta_book"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:textColor="@color/txtPantoneBlack"
+        android:textSize="@dimen/txtSizeLarge" />
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:id="@+id/layout_terms"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left|center"
+        android:layout_marginTop="@dimen/margin_difference_between_view"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/chkbox_Terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:text="@string/loyaltyCard"
+            android:textAllCaps="true"
+            android:fontFamily="@font/latinotype_arquitecta_book"
+            android:buttonTint="@color/colorPantoneBlack"
+            android:textSize="@dimen/txtSizeXSmall" />
+
+        <TextView
+            android:id="@+id/txt_Terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:fontFamily="@font/latinotypebold"
+            android:textColor="@color/colorBlack"
+            android:textColorLink="@color/colorPantoneBlack"
+            android:textSize="@dimen/txtSizeXSmall" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:textAllCaps="true"
+            android:id="@+id/bt_cancel"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_rectangular_pantone_light"
+            android:text="Cancel" />
+
+     <Button
+         android:textAllCaps="true"
+         android:id="@+id/bt_ok"
+         android:paddingHorizontal="@dimen/_20sdp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerInParent="true"
+         android:background="@drawable/round_rectangular_sea_dark"
+         android:text="OK" />
+
+        <Button
+            android:textAllCaps="true"
+            android:id="@+id/bt_submit"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/round_rectangular_sea_dark"
+            android:text="@string/submit" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.butlerschocolates.app.viewmodels.support.SupportViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorSeaBlueLight"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutParent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorSeaBlueDark"
+              >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="@dimen/imgWidth"
+                    android:layout_height="@dimen/imgHeight"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:id="@+id/storeLogo" />
+
+                <LinearLayout
+                    android:padding="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/latinotypebold"
+                                android:text="@string/support_id"
+                                android:textAllCaps="true"
+                                android:textColor="@color/txtLBlack"
+                                android:textSize="@dimen/txtSizeSmall" />
+
+                            <TextView
+                                android:id="@+id/order_id"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/latinotype_arquitecta_book"
+
+                                android:textAllCaps="true"
+                                android:textColor="@color/txtLBlack"
+                                android:textSize="@dimen/txtSizeSmall" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/latinotypebold"
+                                android:text="@string/support_type"
+                                android:textAllCaps="true"
+                                android:textColor="@color/txtLBlack"
+                                android:textSize="@dimen/txtSizeSmall" />
+
+                            <TextView
+                                android:id="@+id/support_type"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/latinotype_arquitecta_book"
+                                android:textColor="@color/txtLBlack"
+                                android:textSize="@dimen/txtSizeSmall" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/latinotypebold"
+                                android:text="@string/support_time"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="@dimen/txtSizeSmall" />
+
+                            <TextView
+                                android:id="@+id/ticketCreatedTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/latinotype_arquitecta_book"
+                                android:textColor="@color/txtLBlack"
+                                android:textSize="@dimen/txtSizeSmall" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                               >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/round_rectangular_pantone_light"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="5dp"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:paddingRight="5dp"
+                                    android:paddingBottom="5dp"
+                                    android:id="@+id/ticketStatus"
+                                    android:textColor="@color/txtLBlack"
+                                    android:textSize="@dimen/txtSizeSmall" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".fragment.support.SupportChatFragment">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_supportChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/bottom_layout"
+                    tools:listitem="@layout/recycler_view_support_message" />
+
+                <LinearLayout
+                    android:id="@+id/bottom_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/colorSeaBlueDark"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_7sdp">
+
+                    <EditText
+                        android:id="@+id/supportTicketComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="1"
+                        android:background="@color/ColorWhite"
+                        android:hint="Message"
+                        android:paddingLeft="@dimen/_10sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp">
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar"
+                            android:layout_width="@dimen/_25ssp"
+                            android:layout_height="@dimen/_25ssp"
+                            android:layout_centerInParent="true" />
+
+                        <ImageView
+                            android:id="@+id/addComment"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_send" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}" />
+    </RelativeLayout>
+</layout>

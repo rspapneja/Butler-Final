@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account"
+    app:startDestination="@+id/spashFragment"
+    tools:ignore="UnusedNavigation">
+    <fragment
+        android:id="@+id/spashFragment"
+        android:name="com.butlerschocolates.app.fragment.splash.SpashFragment"
+        android:label="fragment_spash"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_spashFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_spashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_spashFragment_to_verifyEmailPhoneFragment"
+            app:destination="@id/verifyEmailPhoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.butlerschocolates.app.fragment.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_forgetPasswordFragment"
+            app:destination="@id/forgetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.butlerschocolates.app.fragment.signup.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/verifyEmailPhoneFragment"
+        android:name="com.butlerschocolates.app.fragment.verifydetails.VerifyEmailPhoneFragment"
+        android:label="fragment_verify_email_phone"
+        tools:layout="@layout/fragment_verify_email_phone" />
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        android:name="com.butlerschocolates.app.fragment.forgotpass.ForgetPasswordFragment"
+        android:label="fragment_forget_password"
+        tools:layout="@layout/fragment_forget_password" />
+    <fragment
+        android:id="@+id/changePassword"
+        android:name="com.butlerschocolates.app.fragment.changepass.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+</navigation>

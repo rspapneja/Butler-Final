@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="txtSizeLarge">@dimen/_16ssp</dimen>
+    <dimen name="txtSizeExtraLarge">@dimen/_18ssp</dimen>
+    <dimen name="txtSizeSuperLarge">@dimen/_25ssp</dimen>
+    <dimen name="txtSizeMedium">@dimen/_14ssp</dimen>
+    <dimen name="txtSizeSmall">@dimen/_12ssp</dimen>
+    <dimen name="txtSizeXSmall">@dimen/_10ssp</dimen>
+    <dimen name="txtSizeXXSmall">@dimen/_8ssp</dimen>
+    <dimen name="txtSizeExtraSmall">@dimen/_8ssp</dimen>
+    <dimen name="margin_difference_between_view">@dimen/_10ssp</dimen>
+
+    <dimen name="imgWidth">@dimen/_50sdp</dimen>
+    <dimen name="imgHeight">@dimen/_50sdp</dimen>
+
+
+    <dimen name="prfImgWidth">@dimen/_80sdp</dimen>
+    <dimen name="prfImgHeight">@dimen/_80sdp</dimen>
+    <dimen name="prfPadding">@dimen/_10sdp</dimen>
+</resources>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "412313801783",
+    "firebase_url": "https://butlers-preorder.firebaseio.com",
+    "project_id": "butlers-preorder",
+    "storage_bucket": "butlers-preorder.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412313801783:android:2fdca3e2eda21210eb1bb2",
+        "android_client_info": {
+          "package_name": "com.butlerschocolates.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412313801783-t5ss0vhjta2vfjp06mcdrij18gl50tca.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.butlerschocolates.app",
+            "certificate_hash": "075f8cb799210e7d706cf676eb67eefbddfcad9c"
+          }
+        },
+        {
+          "client_id": "412313801783-2t0g5k6m3pi3g6gounogmt732u9fdcac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCshLn8-wl2GLEczOfVsbSezIs2aAHKu8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "412313801783-2t0g5k6m3pi3g6gounogmt732u9fdcac.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "412313801783-sdft7r4vh1el3kiji7tfo74gvnn0rfb8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.butlerschocolates.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

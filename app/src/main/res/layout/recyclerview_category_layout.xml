@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <!--<import type="com.butlerschocolates.app.util.BindingUtilsKt" />-->
+        <variable
+            name="categorylist"
+            type="com.butlerschocolates.app.model.storelist.Category" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/category_parent_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:gravity="center"
+
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/categoryImage"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/_90sdp"
+            android:background="@drawable/circular_skyblue"
+            android:padding="@dimen/_10sdp"
+            app:image="@{categorylist.categoryImage}"
+          />
+
+        <TextView
+           android:text="@{categorylist.categoryTitle}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/latinotypebold"
+            android:textColor="@color/txtPantoneBlack"
+        />
+
+    </LinearLayout>
+</layout>

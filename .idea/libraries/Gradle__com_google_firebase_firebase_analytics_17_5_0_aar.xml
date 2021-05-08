@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.firebase:firebase-analytics:17.5.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/af35f2b8d39072c7b48380766ab4793c/jetified-firebase-analytics-17.5.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/336b74d54e56f0bf84727d52adc01540/transformed/jetified-firebase-analytics-17.5.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/336b74d54e56f0bf84727d52adc01540/transformed/jetified-firebase-analytics-17.5.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/336b74d54e56f0bf84727d52adc01540/transformed/jetified-firebase-analytics-17.5.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-analytics/17.5.0/3595118ed0ead1cee5178fbd6258f9199eb969a5/firebase-analytics-17.5.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

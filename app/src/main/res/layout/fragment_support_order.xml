@@ -1,0 +1,101 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+      <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.butlerschocolates.app.viewmodels.support.SupportViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ColorPantoneLight"
+                android:padding="@dimen/_5sdp">
+
+            <RelativeLayout
+                android:id="@+id/linearGeneralChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/linearSupportTxt"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:src="@drawable/ic_user_mail" />
+
+                <LinearLayout
+                    android:id="@+id/linearSupportTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotypebold"
+                        android:text="@string/general_support"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotypebold"
+                        android:text="@string/support_message"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_10ssp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/supportOrder_GeneralSupport"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_toRightOf="@+id/linearSupportTxt"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_message" />
+
+            </RelativeLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/supportOrderList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/recyclerview_support_order_list" />
+
+            <include
+                android:id="@+id/no_found"
+                layout="@layout/no_found_layout"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}" />
+    </RelativeLayout>
+</layout>

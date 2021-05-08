@@ -1,0 +1,410 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="orderViewModel"
+            type="com.butlerschocolates.app.viewmodels.orderInfo.OrderInfoViewModel" />
+        <variable
+            name="data"
+            type="com.butlerschocolates.app.model.orderInfo.Success" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorSeaBlueDark"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_10sdp">
+
+                        <TableRow>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotypebold"
+                                    android:text="@string/order_id"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/txtPantoneBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotype_arquitecta_book"
+                                    app:text="@{String.valueOf(data.orderId)}"
+                                    android:textColor="@color/txtPantoneBlack"
+                                    android:textSize="@dimen/_12ssp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotypebold"
+                                    android:gravity="right"
+                                    android:text="@string/invoice_no"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/txtPantoneBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotype_arquitecta_book"
+                                    android:gravity="right"
+                                    app:text="@{String.valueOf(data.invoiceNo)}"
+                                    android:textColor="@color/txtPantoneBlack"
+                                    android:textSize="@dimen/_12ssp" />
+                            </LinearLayout>
+
+
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/_5sdp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotypebold"
+                                    android:text="@string/pickup_code"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/txtPantoneBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotype_arquitecta_book"
+                                    app:text="@{String.valueOf(data.pikcupCode)}"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotypebold"
+                                    android:gravity="right"
+                                    android:text="@string/order_status"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/txtPantoneBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right"
+                                    android:fontFamily="@font/latinotype_arquitecta_book"
+                                    android:gravity="center"
+                                    app:text="@{String.valueOf(data.orderStatus)}"
+                                    android:textColor="@color/txtPantoneBlack"
+                                    android:textSize="@dimen/_12ssp" />
+                            </LinearLayout>
+
+
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/_5sdp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotypebold"
+                                    android:text="@string/order_time"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/txtPantoneBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+                                    android:id="@+id/orderTime"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotype_arquitecta_book"
+                                    app:text="@{String.valueOf(data.created)}"
+                                    android:textColor="@color/txtPantoneBlack"
+                                    android:textSize="@dimen/_12ssp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotypebold"
+                                    android:gravity="right"
+                                    android:text="@string/amount"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/txtPantoneBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+                                    android:id="@+id/orderAmount"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotype_arquitecta_book"
+                                    android:gravity="right"
+                                    app:text='@{String.format("%.2f",data.amount)}'
+                                    android:textColor="@color/txtPantoneBlack"
+                                    android:textSize="@dimen/_12ssp" />
+                            </LinearLayout>
+
+
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/_5sdp">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_pick_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotypebold"
+                                    android:text="@string/pickup_time"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/txtPantoneBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+                                    android:id="@+id/orderPickupTime"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotype_arquitecta_book"
+                                    app:text="@{String.valueOf(data.pickupTime)}"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/colorBlack"
+                                    android:textSize="@dimen/_12ssp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotypebold"
+                                    android:gravity="right"
+                                    android:text="@string/payment_method"
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/txtPantoneBlack"
+                                    android:textSize="@dimen/_12ssp" />
+
+                                <TextView
+                                    android:id="@+id/orderPaymentMethod"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotype_arquitecta_book"
+                                    android:gravity="right"
+                                    app:text="@{String.valueOf(data.paymentMethod)}"                                    android:textAllCaps="true"
+                                    android:textColor="@color/txtPantoneBlack"
+                                    android:textSize="@dimen/_12ssp" />
+                            </LinearLayout>
+                        </TableRow>
+                    </TableLayout>
+
+                    <Button
+                        android:id="@+id/bt_reorder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/round_rectangular_pantone_light"
+                        android:fontFamily="@font/latinotypebold"
+                        android:gravity="center"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_5sdp"
+                        android:text="Re-Order"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txtSizeLarge" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:background="@color/colorBlack" />
+
+
+                <LinearLayout
+                    android:id="@+id/orderStoreDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_10sdp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/orderStoreImage"
+                            app:image='@{data.storeLogo!=null ? data.storeLogo:""}'
+                            android:layout_width="@dimen/imgWidth"
+                            android:layout_height="@dimen/imgHeight"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:background="@drawable/layer_cirular_shadow"
+                            android:src="@drawable/app_icon" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_5sdp">
+
+                            <TextView
+                                android:id="@+id/tv_StoreName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:fontFamily="@font/latinotypebold"
+                                app:text="@{String.valueOf(data.storeTitle)}"
+                                android:textAllCaps="true"
+                                android:singleLine="true"
+                                android:textColor="@color/txtPantoneBlack"
+                                android:textSize="@dimen/_14ssp" />
+
+                            <TextView
+                                android:id="@+id/tv_storeAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:ellipsize="marquee"
+                                android:fontFamily="@font/latinotypebold"
+                                android:singleLine="true"
+                                android:visibility="gone"
+                                android:textColor="@color/txtPantoneBlack"
+                                android:textSize="@dimen/_10ssp" />
+
+                            <TextView
+                                android:id="@+id/tv_storeTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:ellipsize="marquee"
+                                android:fontFamily="@font/latinotypebold"
+                                android:singleLine="true"
+                                android:visibility="invisible"
+                                app:text='@{String.valueOf(data.store_timing)}'
+                                android:textColor="@color/txtPantoneBlack"
+                                android:textSize="@dimen/_10ssp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="@dimen/_15sdp"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:background="@color/txtPantoneBlack" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latinotypebold"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:text="Product(s)"
+                    android:textColor="@color/txtPantoneBlack"
+                    android:textSize="@dimen/_14ssp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/orderProducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:padding="@dimen/_10sdp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:fontFamily="@font/latinotypebold"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:text="History"
+                    android:textColor="@color/txtPantoneBlack"
+                    android:textSize="@dimen/_14ssp" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <androidx.core.widget.ContentLoadingProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="@{orderViewModel.isLoading ? View.VISIBLE : View.GONE}" />
+    </RelativeLayout>
+</layout>
+
+
+

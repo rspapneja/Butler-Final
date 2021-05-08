@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/newCardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ColorWhite"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/scanCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_rectangular_pantone_light"
+                    android:drawableRight="@drawable/ic_card"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:text="SCAN NEW CARD"
+                   android:textAllCaps="false"
+                    android:textColor="@color/txtPantoneBlack"
+                    android:textSize="@dimen/_12ssp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+                    <EditText
+                        android:id="@+id/newCardName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/round_rectangular_yellow_light"
+                        android:hint="Name on Card"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:textColor="@color/txtPantoneBlack" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+                    <mostafa.ma.saleh.gmail.com.editcredit.EditCredit
+                        android:id="@+id/newCardNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@drawable/round_rectangular_yellow_light"
+                        android:hint="Card number"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:textColor="@color/txtPantoneBlack"
+                        app:separator="spaces" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_weight="1">
+
+                        <com.butlerschocolates.app.cardvalidation.ExpiryDateEditText
+                            android:id="@+id/newCardExpiry"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/round_rectangular_yellow_light"
+                            android:hint="MM/YY"
+                            android:inputType="number|none"
+                            android:maxLength="5"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:textColor="@color/txtPantoneBlack" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:id="@+id/newCardCvv"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:background="@drawable/round_rectangular_yellow_light"
+                            android:hint="CVV"
+                            android:inputType="numberPassword"
+                            android:maxLength="3"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:textColor="@color/txtPantoneBlack" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                   <CheckBox
+
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:id="@+id/newCardCheckBoxButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_25sdp"
+                        android:button="@drawable/checkbox_selector"
+                         android:gravity="center|left"
+                        android:layout_gravity="center|left"
+                        android:fontFamily="@font/latinotype_arquitecta_book"
+                        android:text=" Save card for future payments."
+                        android:textColor="@color/txtPantoneBlack"
+                        android:textSize="@dimen/_12ssp" />
+
+                <Button
+                    android:id="@+id/bt_newCardPayNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                     android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/round_rectangular_pantone_light"
+                    android:drawableRight="@drawable/ic_lock"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="     Pay Now     "
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/txtSizeMedium" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

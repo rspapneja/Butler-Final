@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="list"
+            type="com.butlerschocolates.app.model.support.get.ticket.list.Ticket" />
+
+        <variable
+            name="position"
+            type="Integer" />
+
+        <variable
+            name="supportTicketClickedListener"
+            type="com.butlerschocolates.app.adapter.support.SupportTicketListAdapter.SupportTicketClickedListener" />
+    </data>
+
+    <LinearLayout
+
+        android:id="@+id/layoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorSeaBlueDark"
+        android:onClick="@{() -> supportTicketClickedListener.onSupportTicketSelected(list,position)}">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/imgWidth"
+            android:layout_height="@dimen/imgHeight"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/_10sdp"
+            app:image="@{list.storeLogo}" />
+
+        <LinearLayout
+            android:padding="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.55"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotypebold"
+                        android:text="@string/support_id"
+                        android:textAllCaps="true"
+                        android:textColor="@color/txtLBlack"
+                        android:textSize="@dimen/txtSizeSmall" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotype_arquitecta_book"
+                        android:text="@{String.valueOf(list.ticketId)}"
+                        android:textAllCaps="true"
+                        android:textColor="@color/txtLBlack"
+                        android:textSize="@dimen/txtSizeSmall" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotypebold"
+                        android:text="@string/support_type"
+                        android:textAllCaps="true"
+                        android:textColor="@color/txtLBlack"
+                        android:textSize="@dimen/txtSizeSmall" />
+
+                    <TextView
+                        android:id="@+id/support_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotype_arquitecta_book"
+                        android:textColor="@color/txtLBlack"
+                        android:textSize="@dimen/txtSizeSmall" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.55"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pick_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotypebold"
+                        android:text="@string/support_time"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txtSizeSmall" />
+
+                    <TextView
+                        android:id="@+id/myOrderPickupCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotype_arquitecta_book"
+                        android:text="@{list.created}"
+                        android:textColor="@color/txtLBlack"
+                        android:textSize="@dimen/txtSizeSmall" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.45"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/round_rectangular_pantone_light"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="5dp"
+                            android:text="@{list.status.toUpperCase()}"
+                            android:textColor="@color/txtLBlack"
+                            android:textSize="@dimen/txtSizeSmall" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:background="@drawable/ic_message_comment"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="5dp"
+                            android:text="@{String.valueOf(list.totalComments)}"
+                            android:textColor="@color/txtLBlack"
+                            android:textSize="@dimen/txtSizeSmall" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

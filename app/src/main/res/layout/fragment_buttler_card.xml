@@ -1,0 +1,216 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.butlerschocolates.app.viewmodels.butlerCard.ButlerCardViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPantoneBlack">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_130sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/CardBannerImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/ColorPantoneLight"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/tv_buttler_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="@string/my_buttler_card"
+                        android:textAllCaps="true"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/txtSizeExtraLarge" />
+
+                    <LinearLayout
+                        android:id="@+id/loyaltyCardNoLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/round_rectangular_pantone_dark"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_70ssp"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="@dimen/_3ssp"
+                            android:src="@drawable/ic_logo" />
+
+                        <TextView
+                            android:id="@+id/loyaltyCardNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/txtWhite"
+                            android:textSize="@dimen/txtSizeMedium" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/colorPantoneBlack">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recylerview_loyalty"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_marginHorizontal="@dimen/_10sdp"></androidx.recyclerview.widget.RecyclerView>
+                </RelativeLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorSeaBlueDark">
+
+                            <LinearLayout
+                                android:id="@+id/qrCodeScanLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_130sdp"
+                                android:gravity="center"
+                                android:padding="@dimen/_10sdp">
+
+                                <Button
+                                    android:id="@+id/btn_my_code"
+                                    android:layout_width="@dimen/_40sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_marginRight="@dimen/_15sdp"
+                                    android:background="@color/colorPantoneBlack"
+                                    android:fontFamily="@font/latinotypebold"
+                                    android:text="@string/my_code"
+                                    android:textColor="@color/ColorPantoneLight" />
+
+                                <ImageView
+                                    android:id="@+id/img_Qr"
+                                    android:layout_width="@dimen/_100sdp"
+                                    android:layout_height="@dimen/_100sdp"
+                                    android:layout_marginLeft="@dimen/_15sdp"
+                                    android:layout_marginRight="@dimen/_10sdp"
+                                    android:layout_toLeftOf="@+id/btn_scan"
+                                    android:layout_toRightOf="@+id/btn_my_code"
+                                    android:background="@color/txtWhite"
+                                    android:src="@drawable/ic_scanner"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/noCarLinked"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/latinotypebold"
+                                    android:gravity="center"
+                                    android:text="Loyalty card not yet linked \n Click here"
+                                    android:textColorLink="@color/colorPantoneBlack"
+                                    android:textSize="@dimen/txtSizeMedium" />
+
+                                <Button
+                                    android:id="@+id/btn_scan_code"
+                                    android:layout_width="@dimen/_40sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_marginRight="@dimen/_15sdp"
+                                    android:background="@color/colorPantoneBlack"
+                                    android:fontFamily="@font/latinotypebold"
+                                    android:text="@string/scan_code"
+                                    android:textColor="@color/ColorPantoneLight" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPantoneBlack"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:fontFamily="@font/latinotypebold"
+                                android:text="TOP UP  PLATINUM LOYALTY CARD"
+                                android:textAllCaps="true"
+                                android:textColor="@color/ColorPantoneLight"
+                                android:textSize="@dimen/txtSizeLarge"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:fontFamily="@font/latinotypebold"
+                                android:gravity="center"
+                                android:text="---"
+                                android:textColor="@color/ColorPantoneLight"
+                                android:textSize="@dimen/txtSizeLarge"
+                                android:textStyle="bold" />
+
+                            <SeekBar
+                                android:id="@+id/seekbarAmt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_minus5sdp"
+                                android:layout_marginBottom="@dimen/_70sdp"
+                                android:progress="0"
+                                android:theme="@style/MySeekBar"
+                                android:thumb="@drawable/ic_price_range" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/bottom_layout"
+            layout="@layout/bottom_sheet" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account"
+    app:startDestination="@+id/accountFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.butlerschocolates.app.fragment.account.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment_to_contactUSFragment"
+            app:destination="@id/contactUSFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_feedbackFragment"
+            app:destination="@id/feedbackFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_supportFragment"
+            app:destination="@id/supportFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_myOrderFragment"
+            app:destination="@id/myOrderListFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_myOrderListFragment"
+            app:destination="@id/myOrderListFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_faqFragment"
+            app:destination="@id/faqFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_webViewfragment"
+            app:destination="@id/webViewfragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.butlerschocolates.app.fragment.order.OrderDetailFragment"
+        android:label="fragment_order_detail2"
+        tools:layout="@layout/fragment_order_detail" >
+        <action
+            android:id="@+id/action_orderDetailFragment_to_orderPaymentFragment"
+            app:destination="@id/orderPaymentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/orderStatusFragment"
+        android:name="com.butlerschocolates.app.fragment.order.OrderStatusFragment"
+        android:label="fragment_order_status"
+        tools:layout="@layout/fragment_order_status" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.butlerschocolates.app.fragment.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/contactUSFragment"
+        android:name="com.butlerschocolates.app.fragment.contactus.ContactUsFragment"
+        android:label="fragment_contact_u_s"
+        tools:layout="@layout/fragment_contact_us" />
+
+    <fragment
+        android:id="@+id/feedbackFragment"
+        android:name="com.butlerschocolates.app.fragment.feedback.FeedbackFragment"
+        android:label="fragment_feedback"
+        tools:layout="@layout/fragment_feedback" />
+
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.butlerschocolates.app.fragment.support.SupportTicketFragment"
+        android:label="fragment_support"
+        tools:layout="@layout/fragment_support" >
+        <action
+            android:id="@+id/action_supportFragment_to_supportOrderFragment"
+            app:destination="@id/supportOrderFragment" />
+        <action
+            android:id="@+id/action_supportFragment_to_supportChatFragment"
+            app:destination="@id/supportChatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.butlerschocolates.app.fragment.faq.FaqFragment"
+        android:label="faqFragment"
+        tools:layout="@layout/fragment_faq" />
+
+    <fragment
+        android:id="@+id/orderPaymentFragment"
+        android:name="com.butlerschocolates.app.fragment.order.OrderPaymentFragment"
+        android:label="fragment_order_payment"
+        tools:layout="@layout/fragment_order_payment" >
+        <action
+            android:id="@+id/action_orderPaymentFragment_to_orderStatusFragment2"
+            app:destination="@id/orderStatusFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/webViewfragment"
+        android:name="com.butlerschocolates.app.fragment.webview.WebViewFragment"
+        android:label="fragment_webview"
+        tools:layout="@layout/fragment_web_view" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/supportOrderFragment"
+        android:name="com.butlerschocolates.app.fragment.support.SupportOrderFragment"
+        android:label="fragment_support_order"
+        tools:layout="@layout/fragment_support_order" >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/myOrderListFragment"
+        android:name="com.butlerschocolates.app.fragment.order.MyOrderListFragment"
+        android:label="fragment_my_order_list"
+        tools:layout="@layout/fragment_my_order_list" >
+        <action
+            android:id="@+id/action_myOrderListFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/supportChatFragment"
+        android:name="com.butlerschocolates.app.fragment.support.SupportChatFragment"
+        android:label="fragment_support_chat"
+        tools:layout="@layout/fragment_support_chat" />
+    <fragment
+        android:id="@+id/changePassword"
+        android:name="com.butlerschocolates.app.fragment.changepass.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/chooseComplimentaryProductFragment"
+        android:name="com.butlerschocolates.app.fragment.choosecomplimentaryproduct.ComplimentaryProductFragment"
+        android:label="fragment_choose_complimentary_product"
+        tools:layout="@layout/fragment_choose_complimentary_product" />
+</navigation>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_rectangular_whiteshape"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:background="@drawable/round_rectangular_grey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="Loyalty Card Number"
+            android:textColor="@color/colorPantoneBlack"
+            android:fontFamily="@font/latinotypebold"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+
+    <EditText
+        android:id="@+id/loyaltyCardNo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/grey_bg_round_edge"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/txtPantoneBlack"
+        android:singleLine="true"
+        android:hint="Enter your loyalty card number"
+        android:fontFamily="@font/latinotype_arquitecta_regular"
+        android:textCursorDrawable="@color/colorPrimary" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:textAllCaps="true"
+            android:id="@+id/closePopup"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_rectangular_pantone_light"
+            android:text="Cancel" />
+
+        <Button
+            android:textAllCaps="true"
+            android:id="@+id/submitCardNumber"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/round_rectangular_sea_dark"
+            android:text="@string/submit" />
+    </RelativeLayout>
+</LinearLayout>

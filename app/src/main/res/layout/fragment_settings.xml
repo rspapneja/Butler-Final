@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.butlerschocolates.app.viewmodels.setting.SettingViewModel" />
+
+        <variable
+            name="fragment"
+            type="com.butlerschocolates.app.fragment.settings.SettingsFragment" />
+    </data>
+<ScrollView
+    android:layout_width="match_parent"
+    android:background="@color/colorSeaBlueDark"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonChangePassword"
+                android:onClick="@{() -> fragment.openChangePasswordScreen()}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_difference_between_view"
+                android:background="@drawable/round_rectangular_white_shape"
+                android:text="Change Password"
+                android:visibility="gone"
+                android:textColor="@color/colorPantoneBlack"
+                android:textSize="@dimen/txtSizeMedium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latinotype_arquitecta_book"
+                    android:text="NOTIFICATION"
+                    android:textColor="@color/txtPantoneBlack" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latinotype_arquitecta_book"
+                    android:text="Control what message you receive from Butlers "
+                    android:textColor="@color/txtPantoneBlack" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotype_arquitecta_book"
+                        android:text="Email"
+                        android:textAllCaps="true"
+                        android:textColor="@color/txtPantoneBlack" />
+
+                    <Switch
+                        android:id="@+id/switch_noti_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="-8dp"
+                        android:checked="true"
+                        android:onCheckedChanged="@{fragment::onSwitchValueChanged}"
+                        android:scaleX="0.75"
+                        android:scaleY="0.75"
+                        android:showText="false"
+                        android:textOff="No"
+                        android:textOn="Yes"
+                        android:thumb="@drawable/customswitchselector"
+                        android:track="@drawable/custom_track" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotype_arquitecta_book"
+                        android:text="SMS"
+                        android:textAllCaps="true"
+                        android:textColor="@color/txtPantoneBlack" />
+
+                    <Switch
+                        android:id="@+id/switch_noti_sms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="-8dp"
+                        android:checked="true"
+                        android:scaleX="0.75"
+                        android:onCheckedChanged="@{fragment::onSwitchValueChanged}"
+                        android:scaleY="0.75"
+                        android:showText="false"
+                        android:textOff="No"
+                        android:textOn="Yes"
+                        android:thumb="@drawable/customswitchselector"
+                        android:track="@drawable/custom_track" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotype_arquitecta_book"
+                        android:text="Notification"
+                        android:textAllCaps="true"
+                        android:textColor="@color/txtPantoneBlack" />
+
+                    <Switch
+                        android:id="@+id/switch_noti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="-8dp"
+                        android:checked="true"
+                        android:scaleX="0.75"
+                        android:onCheckedChanged="@{fragment::onSwitchValueChanged}"
+                        android:scaleY="0.75"
+                        android:showText="false"
+                        android:textOff="No"
+                        android:textOn="Yes"
+                        android:thumb="@drawable/customswitchselector"
+                        android:track="@drawable/custom_track" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorSeaBlueLight"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latinotype_arquitecta_book"
+                    android:text="Account Setting"
+                    android:textAllCaps="true"
+                    android:textColor="@color/txtPantoneBlack" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latinotype_arquitecta_book"
+                    android:text="We may need to send a message regarding your account"
+                    android:textColor="@color/txtPantoneBlack" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotype_arquitecta_book"
+                        android:textAllCaps="true"
+                        android:text="Email"
+                        android:textColor="@color/txtPantoneBlack" />
+
+                    <Switch
+                        android:id="@+id/switch_account_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="-8dp"
+                        android:checked="true"
+                        android:scaleX="0.75"
+                        android:scaleY="0.75"
+                        android:onCheckedChanged="@{fragment::onSwitchValueChanged}"
+                        android:showText="false"
+                        android:textOff="No"
+                        android:textOn="Yes"
+                        android:thumb="@drawable/customswitchselector"
+                        android:track="@drawable/custom_track" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotype_arquitecta_book"
+                        android:text="Text Message"
+                        android:textAllCaps="true"
+                        android:textColor="@color/txtPantoneBlack" />
+
+                    <Switch
+                        android:id="@+id/switch_account_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="-8dp"
+                        android:checked="true"
+                        android:scaleX="0.75"
+                        android:scaleY="0.75"
+                        android:onCheckedChanged="@{fragment::onSwitchValueChanged}"
+                        android:showText="false"
+                        android:textOff="No"
+                        android:textOn="Yes"
+                        android:thumb="@drawable/customswitchselector"
+                        android:track="@drawable/custom_track" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latinotype_arquitecta_book"
+                    android:text="Privacy &amp; Community"
+                    android:textColor="@color/txtPantoneBlack" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latinotype_arquitecta_book"
+                    android:text="Receive updates on store regulations and stay informed "
+                    android:textColor="@color/txtPantoneBlack" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotype_arquitecta_book"
+                        android:text="Email"
+                        android:textAllCaps="true"
+                        android:textColor="@color/txtPantoneBlack" />
+
+                    <Switch
+                        android:id="@+id/switch_privacy_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="-8dp"
+                        android:checked="true"
+                        android:scaleX="0.75"
+                        android:scaleY="0.75"
+                        android:onCheckedChanged="@{fragment::onSwitchValueChanged}"
+                        android:showText="false"
+                        android:textOff="No"
+                        android:textOn="Yes"
+                        android:thumb="@drawable/customswitchselector"
+                        android:track="@drawable/custom_track" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotype_arquitecta_book"
+                        android:text="Text Message"
+                        android:textAllCaps="true"
+                        android:textColor="@color/txtPantoneBlack" />
+
+                    <Switch
+                        android:id="@+id/switch_privacy_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="-8dp"
+                        android:checked="true"
+                        android:scaleX="0.75"
+                        android:scaleY="0.75"
+                        android:showText="false"
+                        android:textOff="No"
+                        android:onCheckedChanged="@{fragment::onSwitchValueChanged}"
+                        android:textOn="Yes"
+                        android:thumb="@drawable/customswitchselector"
+                        android:track="@drawable/custom_track" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/latinotype_arquitecta_book"
+                        android:text="PHONE CALLS"
+                        android:textAllCaps="true"
+                        android:textColor="@color/txtPantoneBlack" />
+
+                    <Switch
+                        android:id="@+id/switch_privacy_phoneCall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="-8dp"
+                        android:checked="true"
+                        android:scaleX="0.75"
+                        android:scaleY="0.75"
+                        android:showText="false"
+                        android:textOff="No"
+                        android:textOn="Yes"
+                        android:onCheckedChanged="@{fragment::onSwitchValueChanged}"
+                        android:thumb="@drawable/customswitchselector"
+                        android:track="@drawable/custom_track" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}" />
+    </RelativeLayout>
+</ScrollView>
+</layout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="orderViewModel"
+            type="com.butlerschocolates.app.viewmodels.orderInfo.OrderInfoViewModel" />
+
+        <variable
+            name="data"
+            type="com.butlerschocolates.app.model.orderInfo.Success" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorSeaBlueDark"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutCompleteOrder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/orderDetailLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+
+                        android:layout_width="@dimen/_28sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/_1sdp"
+                        android:backgroundTint="@color/txtPantoneBlack"
+                        android:src="@drawable/ic_detail" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/latinotypebold"
+                        android:text="ORDER DETAILS"
+                        android:textSize="@dimen/txtSizeMedium"
+                        android:textColor="@color/colorPantoneBlack" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvOrderAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/latinotypebold"
+                android:gravity="center"
+                android:text="@{data.orderStatusInfo}"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPantoneBlack"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+<!--
+            android:text='@{@string/orderPickUpAddress(data.storeTitle!=null ? data.storeTitle : "" )}'
+-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="@dimen/_15sdp"
+                android:background="@color/colorPantoneBlack" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:layout_margin="@dimen/_10sdp"
+                android:fontFamily="@font/latinotypebold"
+                android:gravity="center"
+                android:text="ORDER STATUS"
+                android:textColor="@color/colorPantoneBlack"
+                android:textSize="@dimen/txtSizeExtraLarge"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@color/colorSeaBlueLight"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_orderStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latinotypebold"
+                    android:gravity="center"
+                    android:text="@{data.orderStatus}"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPantoneBlack"
+                    android:textSize="@dimen/txtSizeExtraLarge"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pick_up_time_layout"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:fontFamily="@font/latinotypebold"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:text="PICK UP TIME : "
+                    android:textColor="@color/colorPantoneBlack"
+                    android:textSize="@dimen/txtSizeLarge" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:text="@{data.pickupTime}"
+                    android:textColor="@color/colorPantoneBlack"
+                    android:textSize="@dimen/txtSizeLarge" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/latinotypebold"
+                    android:text="PICK UP CODE : "
+                    android:textColor="@color/colorPantoneBlack"
+                    android:textSize="@dimen/txtSizeLarge" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:text="@{data.pikcupCode}"
+                    android:textColor="@color/colorPantoneBlack"
+                    android:textSize="@dimen/txtSizeLarge" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:background="@color/colorPantoneBlack" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="@{orderViewModel.isLoading ? View.VISIBLE : View.GONE}" />
+    </RelativeLayout>
+</layout>

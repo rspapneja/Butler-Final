@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.butlerschocolates.app.viewmodels.verfiyotp.VerifyOtpViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPantoneBlack"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_logo"></ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_login"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:padding="@dimen/_20sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latinotypebold"
+                    android:gravity="center"
+                    android:text="@string/one_Time_password"
+                    android:textColor="@color/ColorWhite"
+                    android:textSize="@dimen/txtSizeLarge"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/email_Txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="@dimen/_220sdp"
+                        android:fontFamily="@font/latinotypebold"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="@dimen/txtSizeLarge"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:ellipsize="marquee"
+                        android:singleLine="true"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/btn_editEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:src="@drawable/ic_edit_email"
+                        android:layout_toRightOf="@+id/email_Txt"
+                        android:tint="#fff" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:background="@drawable/round_rectangular_white_shape">
+
+                    <EditText
+                        android:id="@+id/ed_verifyotp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:fontFamily="@font/latinotype_arquitecta_book"
+                        android:gravity="center|left"
+                        android:hint="@string/verify_otp"
+                        android:inputType="number"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPantoneBlack"
+                        android:textColorHint="@color/txtPantoneBlack"
+                        android:textSize="@dimen/txtSizeLarge" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/timerTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/latinotype_arquitecta_regular"
+                            android:text="00:00"
+                            android:textColor="@color/ColorWhite"
+                            android:textSize="@dimen/txtSizeLarge" />
+
+                        <Button
+                            android:id="@+id/bt_verify"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_difference_between_view"
+                            android:background="@drawable/round_rectangular_white_shape"
+                            android:text="@string/verify"
+                            android:textColor="@color/colorPantoneBlack"
+                            android:textSize="@dimen/txtSizeMedium" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}" />
+    </RelativeLayout>
+</layout>

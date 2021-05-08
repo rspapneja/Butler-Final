@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MySeekBar" parent="@style/Widget.AppCompat.SeekBar" >
+    <!--    <item name="colorAccent">@color/colorSeaBlueDark</item>-->
+        <item name="android:colorControlActivated" tools:ignore="NewApi">@color/colorSeaBlueDark</item>
+        <item name="android:colorControlNormal" tools:ignore="NewApi">@color/colorSeaBlueDark</item>
+    </style>
+
+    <style name="Widget.BottomNavigationView"
+        parent="Widget.Design.BottomNavigationView">
+        <item name="android:textSize">8sp</item>
+        <item name="fontFamily">@font/latinotype_arquitecta_book</item>
+    </style>
+
+
+    <style name="mytheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/pop_background</item>
+    </style>
+
+    <style name="Theme.custom" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">true</item>
+
+        <item name="android:windowBackground">@drawable/rectangularshape</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorAccent</item>
+    </style>
+
+</resources>

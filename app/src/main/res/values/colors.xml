@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C09F75</color>
+    <color name="colorPrimaryDark">#372B30</color>
+    <color name="colorAccent">#C09F75</color>
+
+    <color name="colorSeaBlueDark">#A2C3BA</color>
+    <color name="colorSeaBlueLight">#d3e9df</color>
+    <color name="colorPantoneBlack">#372B30</color>
+  <!--  <color name="colorPantoneBlack">#3E2B2F</color>-->
+    <color name="ColorPantoneLight">#C09F75</color>
+    <color name="ColorYellowLight">#ece1ce</color>
+
+    <color name="ColorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBorder">#000000</color>
+
+    <color name="txtSeaBlueDark">#A2C3BA</color>
+    <color name="txtSeaBlueLight">#60d3e9df</color>
+    <color name="txtPantoneBlack">#3E2B2F</color>
+    <color name="txtPantoneLight">#C09F75</color>
+    <color name="txtWhite">#ffffff</color>
+    <color name="txtLBlack">#000000</color>
+    <color name="colorTransparentBlack">#30000000</color>
+
+</resources>

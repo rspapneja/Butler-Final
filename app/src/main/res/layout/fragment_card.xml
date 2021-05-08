@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorSeaBlueDark"
+    android:layout_height="match_parent">
+
+    <ImageView android:layout_width="match_parent"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_star"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textSize="@dimen/txtSizeSuperLarge"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_difference_between_view"
+        android:textColor="@color/colorPantoneBlack"
+        android:text="@string/my_butlers_card"
+        android:layout_height="wrap_content"/>
+
+    <ImageView android:layout_width="@dimen/_140sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin_difference_between_view"
+        android:background="@color/colorPantoneBlack"
+        android:layout_height="@dimen/_2sdp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:textAllCaps="true"
+        android:textSize="@dimen/txtSizeLarge"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_difference_between_view"
+        android:textColor="@color/colorPantoneBlack"
+        android:text="@string/my_butlers_card_desc"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
